@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
     {
         opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
     });
+    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 }
@@ -23,5 +24,17 @@ var app = builder.Build();
     app.UseAuthorization();
     app.MapControllers();
 }
+
+try
+{
+    using var seeder = new DataSeeder(app)
+        .ApplyMigrations()
+        .InsertCatalogItems();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
+
 
 app.Run();
