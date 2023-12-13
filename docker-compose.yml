@@ -1,7 +1,7 @@
 ﻿version: "3.8"
 name: "purple-lib"
 
-services: 
+services:
   postgres:
     image: postgres
     environment:
@@ -10,8 +10,19 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+  
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/var/lib/mongodb/data 
 
-volumes: 
+volumes:
   pgdata:
+  mongodata:
     
   
