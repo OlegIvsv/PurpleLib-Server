@@ -77,4 +77,20 @@ public class CatalogController : ControllerBase
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
         return Ok(responseItem);
     }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteCatalogItem(Guid id)
+    {
+        var item = await _context.CatalogItems
+            .Include(i => i.Flora)
+            .FirstOrDefaultAsync(i => i.Id == id);
+        if (item is null)
+            return NotFound();
+        // TODO: deleting should be implemented as cascade
+        _context.Entry(item.Flora).State = EntityState.Deleted;
+        _context.CatalogItems.Remove(item);
+        await _context.SaveChangesAsync();
+
+        return Ok();
+    }
 }
