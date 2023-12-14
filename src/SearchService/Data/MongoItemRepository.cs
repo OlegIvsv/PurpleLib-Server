@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using MongoDB.Driver;
 using SearchService.Contracts;
 using SearchService.Models;
@@ -31,13 +32,18 @@ public class MongoItemRepository : IItemRepository
         _itemCollection.Indexes.CreateOne(indexModel);
     }
 
-    public async Task<PaginationResult<Item>> RunSearch(string query, int page, int pageSize)
+    public async Task<PaginationResult<Item>> RunSearch(
+        string? query,
+        int page,
+        int pageSize,
+        string sortOrder,
+        string sortProperty)
     {
         int preventedPage = Math.Max(0, page);
         int preventedPageSize = Math.Max(1, pageSize);
 
-        var filter = Builders<Item>.Filter.Text(query, new TextSearchOptions() { CaseSensitive = false });
-        var sort = Builders<Item>.Sort.MetaTextScore("score");
+        var filter = ItemFilter(query);
+        var sort = ItemSorting(sortOrder, sortProperty);
 
         var items = await _itemCollection
             .Find(filter)
@@ -53,5 +59,45 @@ public class MongoItemRepository : IItemRepository
             Count = items.Count,
             Items = items
         };
+    }
+
+    private SortDefinition<Item> ItemSorting(string sortOrder, string sortProperty)
+    {
+        var sort = Builders<Item>.Sort;
+        Expression<Func<Item, object>>? propertySelector;
+
+        switch (sortProperty)
+        {
+            case "title":
+                propertySelector = x => x.Title;
+                break;
+            case "name":
+                propertySelector = x => x.Name;
+                break;
+            case "price":
+                propertySelector = x => x.OriginalPrice;
+                break;
+            case "date":
+                propertySelector = x => x.CreatedAt;
+                break;
+            default:
+                propertySelector = x => x.CreatedAt;
+                break;
+        }
+
+        sort.MetaTextScore("score");
+
+        if (sortOrder == "asc")
+            return sort.Ascending(propertySelector);
+        else
+            return sort.Descending(propertySelector);
+    }
+
+    private FilterDefinition<Item> ItemFilter(string? query)
+    {
+        var filter = Builders<Item>.Filter;
+        if (string.IsNullOrWhiteSpace(query))
+            return filter.Empty;
+        return filter.Text(query, new TextSearchOptions() { CaseSensitive = false });
     }
 }
