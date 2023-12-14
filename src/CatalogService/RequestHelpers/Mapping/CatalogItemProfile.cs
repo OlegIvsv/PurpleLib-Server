@@ -1,6 +1,7 @@
 using AutoMapper;
 using CatalogService.Contracts;
 using CatalogService.Entities;
+using Contracts.CatalogItem;
 
 namespace CatalogService.RequestHelpers.Mapping;
 
@@ -36,5 +37,12 @@ public class CatalogItemProfile : Profile
 
         CreateMap<string, FloraPicture>()
             .ConvertUsing(s => new FloraPicture() { Url = s });
+
+        CreateMap<CatalogItem, CatalogItemCreated>()
+            .IncludeMembers(x => x.Flora);
+
+        CreateMap<Flora, CatalogItemCreated>()
+            .ForMember(cir => cir.Pictures,
+                opt => opt.MapFrom(f => f.Pictures.Select(p => p.Url).ToList()));
     }
 }

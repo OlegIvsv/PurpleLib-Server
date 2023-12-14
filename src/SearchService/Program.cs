@@ -1,4 +1,5 @@
 using MassTransit;
+using SearchService.Consumers;
 using SearchService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,19 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     builder.Services.AddSingleton<IItemRepository, MongoItemRepository>(_ =>
         new MongoItemRepository(builder.Configuration.GetConnectionString("DefaultMongoConnection")!));
     builder.Services.AddMassTransit(opt =>
     {
+        opt.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false));
+        opt.AddConsumer<CatalogItemCreatedConsumer>();
+        
         opt.UsingRabbitMq((context, config) =>
         {
-            config.Host("localhost",
-                "/",
-                h =>
-                {
-                    h.Username("guest");
-                    h.Password("guest");
-                });
             config.ConfigureEndpoints(context);
         });
     });

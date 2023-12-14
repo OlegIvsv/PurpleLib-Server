@@ -32,6 +32,11 @@ public class MongoItemRepository : IItemRepository
         _itemCollection.Indexes.CreateOne(indexModel);
     }
 
+    public async Task Insert(Item item)
+    {
+        await _itemCollection.InsertOneAsync(item);
+    }
+
     public async Task<PaginationResult<Item>> RunSearch(
         string? query,
         int page,

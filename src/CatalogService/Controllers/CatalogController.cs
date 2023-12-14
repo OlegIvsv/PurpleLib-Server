@@ -2,6 +2,8 @@ using AutoMapper;
 using CatalogService.Contracts;
 using CatalogService.Data;
 using CatalogService.Entities;
+using Contracts.CatalogItem;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,11 +15,13 @@ public class CatalogController : ControllerBase
 {
     private readonly IMapper _mapper;
     private readonly CatalogDbContext _context;
+    private readonly IPublishEndpoint _publishEndpoint;
 
-    public CatalogController(CatalogDbContext context, IMapper mapper)
+    public CatalogController(CatalogDbContext context, IMapper mapper, IPublishEndpoint publishEndpoint)
     {
         _context = context;
         _mapper = mapper;
+        _publishEndpoint = publishEndpoint;
     }
 
     [HttpGet]
@@ -55,6 +59,9 @@ public class CatalogController : ControllerBase
         await _context.CatalogItems.AddAsync(item);
         await _context.SaveChangesAsync();
 
+        var itemCreatedMessage = _mapper.Map<CatalogItemCreated>(item);
+        await _publishEndpoint.Publish(itemCreatedMessage);
+        
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
         return Ok(responseItem);
     }

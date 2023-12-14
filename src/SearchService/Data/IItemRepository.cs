@@ -11,4 +11,6 @@ public interface IItemRepository
         int pageSize,
         string sortOrder,
         string sortProperty);
+
+    Task Insert(Item item);
 }

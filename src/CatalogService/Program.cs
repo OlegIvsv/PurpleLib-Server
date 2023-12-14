@@ -11,15 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
     });
     builder.Services.AddMassTransit(opt =>
     {
-        opt.UsingRabbitMq((context, config) =>
+        opt.UsingRabbitMq((context, config) =>  
         {
-            config.Host("localhost",
-                "/",
-                h =>
-                {
-                    h.Username("guest");
-                    h.Password("guest");
-                });
             config.ConfigureEndpoints(context);
         });
     });
