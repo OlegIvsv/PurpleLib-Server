@@ -1,0 +1,900 @@
+[
+  {
+    "id": "74056c3a-33b0-4353-b023-f3c0055f0566",
+    "title": "Awesome Cotton Cheese",
+    "originalPrice": 40,
+    "soldAmount": 38,
+    "seller": "Robbie64",
+    "floraId": "34ccde81-c87e-4381-bd24-5789e9b3d41d",
+    "status": "Finished",
+    "offerEndsAt": "2025-09-16T08:26:50.747079Z",
+    "createdAt": "2023-01-02T17:20:54.590209Z",
+    "updatedAt": "2023-05-12T19:55:19.436071Z",
+    "name": "Gorgeous Plastic Fish",
+    "color": "salmon",
+    "lifeTime": "2023-09-01T17:43:51.603252Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=860",
+      "https://picsum.photos/640/480/?image=932"
+    ]
+  },
+  {
+    "id": "7840d13d-37d4-4dd6-9658-0292d1a919ce",
+    "title": "Awesome Rubber Shirt",
+    "originalPrice": 230,
+    "soldAmount": 35,
+    "seller": "Willow_Kozey",
+    "floraId": "d7cd64b9-1f0d-4320-9959-9f978dcc5232",
+    "status": "Live",
+    "offerEndsAt": "2029-02-14T17:54:18.597983Z",
+    "createdAt": "2023-03-24T05:53:26.349502Z",
+    "updatedAt": "2023-09-25T10:16:01.071749Z",
+    "name": "Licensed Rubber Tuna",
+    "color": "mint green",
+    "lifeTime": "2023-09-13T21:49:08.786145Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=378",
+      "https://picsum.photos/640/480/?image=110",
+      "https://picsum.photos/640/480/?image=45",
+      "https://picsum.photos/640/480/?image=784"
+    ]
+  },
+  {
+    "id": "f4372b96-1434-41c7-b600-ffdb88bc371f",
+    "title": "Ergonomic Rubber Chicken",
+    "originalPrice": 90,
+    "soldAmount": 43,
+    "seller": "Alvera20",
+    "floraId": "9b74b619-aac6-43af-b701-2ffaea492fe5",
+    "status": "Finished",
+    "offerEndsAt": "2025-04-28T19:18:36.659714Z",
+    "createdAt": "2023-10-29T23:36:39.495692Z",
+    "updatedAt": "2023-07-07T08:55:39.711626Z",
+    "name": "Intelligent Fresh Pants",
+    "color": "red",
+    "lifeTime": "2023-05-26T16:35:41.964761Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=473",
+      "https://picsum.photos/640/480/?image=607"
+    ]
+  },
+  {
+    "id": "3ef69ab4-4e00-44a7-aa6d-091ea3c27a84",
+    "title": "Fantastic Concrete Pants",
+    "originalPrice": 50,
+    "soldAmount": 48,
+    "seller": "Marianne_Ernser52",
+    "floraId": "3725c323-2682-4a73-a123-7921a99682d2",
+    "status": "Finished",
+    "offerEndsAt": "2029-09-23T05:21:42.729855Z",
+    "createdAt": "2023-11-19T06:26:26.836854Z",
+    "updatedAt": "2023-08-25T20:10:51.725962Z",
+    "name": "Generic Cotton Shoes",
+    "color": "ivory",
+    "lifeTime": "2023-09-01T05:57:18.987459Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=495",
+      "https://picsum.photos/640/480/?image=405",
+      "https://picsum.photos/640/480/?image=41"
+    ]
+  },
+  {
+    "id": "7c107e0d-28cb-41bd-a0f8-fb6157c0ae4b",
+    "title": "Fantastic Cotton Car",
+    "originalPrice": 240,
+    "soldAmount": 30,
+    "seller": "Candice_Pollich89",
+    "floraId": "e6b8f205-77a4-469e-be8f-67e6ac3f6d94",
+    "status": "Finished",
+    "offerEndsAt": "2030-08-29T02:57:10.408274Z",
+    "createdAt": "2023-11-26T14:14:38.342392Z",
+    "updatedAt": "2023-10-14T09:50:01.932176Z",
+    "name": "Sleek Plastic Computer",
+    "color": "black",
+    "lifeTime": "2023-01-22T04:46:19.551511Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=872",
+      "https://picsum.photos/640/480/?image=774"
+    ]
+  },
+  {
+    "id": "466935b6-e189-4d98-a4fe-4dc1188741ad",
+    "title": "Fantastic Fresh Shirt",
+    "originalPrice": 290,
+    "soldAmount": 41,
+    "seller": "Fermin.Wiegand56",
+    "floraId": "51859afe-f1c5-40a9-87d2-e75db85fc778",
+    "status": "Finished",
+    "offerEndsAt": "2025-12-30T23:44:59.998364Z",
+    "createdAt": "2023-10-04T02:05:44.245317Z",
+    "updatedAt": "2023-06-04T05:13:06.483431Z",
+    "name": "Practical Soft Chair",
+    "color": "cyan",
+    "lifeTime": "2023-05-24T08:00:06.473666Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=544",
+      "https://picsum.photos/640/480/?image=67"
+    ]
+  },
+  {
+    "id": "a7ced4ad-d56a-41ef-b4e3-03e074f97873",
+    "title": "Fantastic Granite Shoes",
+    "originalPrice": 50,
+    "soldAmount": 35,
+    "seller": "Giles.Turcotte51",
+    "floraId": "d3b7f0df-34fc-498d-9990-7e69693b4f46",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2024-09-20T01:01:32.115752Z",
+    "createdAt": "2023-11-26T16:16:15.173102Z",
+    "updatedAt": "2023-04-05T09:49:14.2081Z",
+    "name": "Refined Fresh Pants",
+    "color": "plum",
+    "lifeTime": "2023-05-20T15:29:08.594422Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=388",
+      "https://picsum.photos/640/480/?image=49",
+      "https://picsum.photos/640/480/?image=1042",
+      "https://picsum.photos/640/480/?image=1029"
+    ]
+  },
+  {
+    "id": "c06d7cc9-0f6b-46ab-9a61-4f57e2028e9b",
+    "title": "Fantastic Soft Ball",
+    "originalPrice": 400,
+    "soldAmount": 41,
+    "seller": "Iliana_Sanford35",
+    "floraId": "08a857e0-b270-4a61-9c69-d75caa6adf4c",
+    "status": "Finished",
+    "offerEndsAt": "2025-09-27T22:07:58.002302Z",
+    "createdAt": "2023-04-01T10:43:42.388624Z",
+    "updatedAt": "2023-06-01T04:14:45.301573Z",
+    "name": "Rustic Cotton Mouse",
+    "color": "ivory",
+    "lifeTime": "2023-03-22T05:38:41.477929Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=787",
+      "https://picsum.photos/640/480/?image=737"
+    ]
+  },
+  {
+    "id": "55e92a2c-aa3e-421c-b4b5-0892cebe984a",
+    "title": "Generic Granite Salad",
+    "originalPrice": 160,
+    "soldAmount": 43,
+    "seller": "Malika.Wunsch76",
+    "floraId": "00ced3d3-16e2-4862-9af8-3f58050879c4",
+    "status": "Live",
+    "offerEndsAt": "2024-07-27T18:09:52.617104Z",
+    "createdAt": "2023-08-28T13:06:43.887795Z",
+    "updatedAt": "2023-06-14T16:05:23.403803Z",
+    "name": "Ergonomic Fresh Hat",
+    "color": "black",
+    "lifeTime": "2023-11-04T22:07:36.996661Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=127",
+      "https://picsum.photos/640/480/?image=810",
+      "https://picsum.photos/640/480/?image=777"
+    ]
+  },
+  {
+    "id": "9aa3951a-aaaf-4033-a982-612d68cdc038",
+    "title": "Generic Plastic Gloves",
+    "originalPrice": 30,
+    "soldAmount": 4,
+    "seller": "Michele.Sawayn58",
+    "floraId": "eafd1913-0386-4cff-abea-cfdb2bfbd37c",
+    "status": "Finished",
+    "offerEndsAt": "2025-01-06T20:15:37.034218Z",
+    "createdAt": "2023-09-20T03:43:55.803148Z",
+    "updatedAt": "2023-11-12T21:24:46.928332Z",
+    "name": "Unbranded Steel Bike",
+    "color": "azure",
+    "lifeTime": "2023-09-11T16:43:45.429609Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=1066",
+      "https://picsum.photos/640/480/?image=996",
+      "https://picsum.photos/640/480/?image=896"
+    ]
+  },
+  {
+    "id": "9a39b3e6-e872-4c9c-b894-c74b3b6cbdac",
+    "title": "Generic Rubber Table",
+    "originalPrice": 100,
+    "soldAmount": 47,
+    "seller": "Rudolph_Waelchi3",
+    "floraId": "182c7623-d366-40ac-a823-f9f9d3e2341b",
+    "status": "Finished",
+    "offerEndsAt": "2027-08-19T21:39:49.626688Z",
+    "createdAt": "2023-10-12T17:04:18.40782Z",
+    "updatedAt": "2023-05-29T19:21:22.014392Z",
+    "name": "Unbranded Cotton Towels",
+    "color": "purple",
+    "lifeTime": "2023-10-13T20:11:35.172628Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=6",
+      "https://picsum.photos/640/480/?image=886",
+      "https://picsum.photos/640/480/?image=872"
+    ]
+  },
+  {
+    "id": "a16c861c-f1d6-47e1-bb90-bdc9df66acb0",
+    "title": "Gorgeous Frozen Chair",
+    "originalPrice": 180,
+    "soldAmount": 19,
+    "seller": "Lawrence.Shields",
+    "floraId": "51c060ce-14c3-4abc-94bc-3e31d5ad2839",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2029-01-23T00:18:53.826907Z",
+    "createdAt": "2023-01-28T00:15:56.539165Z",
+    "updatedAt": "2023-02-16T03:00:33.495387Z",
+    "name": "Awesome Frozen Bacon",
+    "color": "fuchsia",
+    "lifeTime": "2023-09-06T08:01:35.86475Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=906",
+      "https://picsum.photos/640/480/?image=403",
+      "https://picsum.photos/640/480/?image=336",
+      "https://picsum.photos/640/480/?image=80"
+    ]
+  },
+  {
+    "id": "22630977-109a-4e5d-b0cf-5a812e54959e",
+    "title": "Gorgeous Granite Chair",
+    "originalPrice": 160,
+    "soldAmount": 21,
+    "seller": "Dorthy.Funk3",
+    "floraId": "e30c29bd-5361-4836-b497-37443c778fd5",
+    "status": "Live",
+    "offerEndsAt": "2030-08-13T07:26:09.989549Z",
+    "createdAt": "2023-09-24T03:22:49.335868Z",
+    "updatedAt": "2023-01-05T06:34:27.412846Z",
+    "name": "Refined Rubber Salad",
+    "color": "olive",
+    "lifeTime": "2023-06-25T18:01:42.650669Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=355",
+      "https://picsum.photos/640/480/?image=5",
+      "https://picsum.photos/640/480/?image=1062"
+    ]
+  },
+  {
+    "id": "19d4ebf9-8be4-489e-ad64-58c10f9f0d4e",
+    "title": "Gorgeous Granite Salad",
+    "originalPrice": 310,
+    "soldAmount": 20,
+    "seller": "Nya_Zboncak",
+    "floraId": "11a08797-91f2-4de1-a5c0-752ea5ea57d9",
+    "status": "Live",
+    "offerEndsAt": "2025-10-05T14:41:05.674716Z",
+    "createdAt": "2022-12-23T08:51:31.79267Z",
+    "updatedAt": "2023-12-03T09:39:05.658641Z",
+    "name": "Handmade Soft Chicken",
+    "color": "violet",
+    "lifeTime": "2023-04-13T07:40:37.352642Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=735",
+      "https://picsum.photos/640/480/?image=633",
+      "https://picsum.photos/640/480/?image=541"
+    ]
+  },
+  {
+    "id": "2fbb2db8-20f1-48da-aab4-84135daf0a7b",
+    "title": "Handcrafted Concrete Towels",
+    "originalPrice": 160,
+    "soldAmount": 19,
+    "seller": "Jody_Nienow",
+    "floraId": "e33c0dd7-56fb-4ab0-b914-d316f9482d65",
+    "status": "Finished",
+    "offerEndsAt": "2029-01-27T19:00:12.390328Z",
+    "createdAt": "2023-05-23T19:13:59.736614Z",
+    "updatedAt": "2023-05-31T18:15:30.678166Z",
+    "name": "Sleek Rubber Keyboard",
+    "color": "turquoise",
+    "lifeTime": "2023-11-14T06:42:56.92234Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=226",
+      "https://picsum.photos/640/480/?image=193",
+      "https://picsum.photos/640/480/?image=271",
+      "https://picsum.photos/640/480/?image=268"
+    ]
+  },
+  {
+    "id": "007b15c4-7a2a-4bc7-aeb2-e6e5ade62f7f",
+    "title": "Handcrafted Granite Shirt",
+    "originalPrice": 50,
+    "soldAmount": 49,
+    "seller": "Jean40",
+    "floraId": "c5702787-62dc-4fbf-b00c-aefe69bb43d6",
+    "status": "Finished",
+    "offerEndsAt": "2025-11-10T02:36:14.022547Z",
+    "createdAt": "2023-03-05T20:55:10.583017Z",
+    "updatedAt": "2023-09-28T15:02:35.424579Z",
+    "name": "Fantastic Steel Mouse",
+    "color": "grey",
+    "lifeTime": "2023-11-07T10:03:06.291077Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=931",
+      "https://picsum.photos/640/480/?image=973",
+      "https://picsum.photos/640/480/?image=1",
+      "https://picsum.photos/640/480/?image=62"
+    ]
+  },
+  {
+    "id": "19f74b73-88bb-49a2-82e7-e73e552e1102",
+    "title": "Handcrafted Metal Chips",
+    "originalPrice": 50,
+    "soldAmount": 25,
+    "seller": "Berta33",
+    "floraId": "80f96981-4aa9-4555-b8c1-b49b2d6f08cb",
+    "status": "Live",
+    "offerEndsAt": "2030-09-17T08:44:52.996628Z",
+    "createdAt": "2023-05-30T23:59:27.216993Z",
+    "updatedAt": "2023-10-02T02:55:02.931487Z",
+    "name": "Sleek Wooden Pants",
+    "color": "red",
+    "lifeTime": "2023-03-18T14:52:25.727365Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=388",
+      "https://picsum.photos/640/480/?image=572",
+      "https://picsum.photos/640/480/?image=814"
+    ]
+  },
+  {
+    "id": "0309ff27-39d1-4445-a537-2e833191d12a",
+    "title": "Handcrafted Rubber Ball",
+    "originalPrice": 320,
+    "soldAmount": 35,
+    "seller": "Hershel_Christiansen",
+    "floraId": "20a8d2fd-0471-42f2-80c9-1297d6df509f",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2026-02-06T11:22:32.71765Z",
+    "createdAt": "2023-12-13T02:35:02.124561Z",
+    "updatedAt": "2023-03-12T16:45:29.313562Z",
+    "name": "Awesome Metal Bacon",
+    "color": "sky blue",
+    "lifeTime": "2023-09-06T18:37:27.074658Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=636",
+      "https://picsum.photos/640/480/?image=1035",
+      "https://picsum.photos/640/480/?image=659"
+    ]
+  },
+  {
+    "id": "f28eacc0-3b1b-4600-a65d-6528c13c83bd",
+    "title": "Handcrafted Wooden Tuna",
+    "originalPrice": 470,
+    "soldAmount": 4,
+    "seller": "Keara.Koelpin",
+    "floraId": "f895ee80-6652-41e1-8801-850b3ef9e8ee",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2024-01-30T00:13:48.806387Z",
+    "createdAt": "2023-02-21T14:55:00.995717Z",
+    "updatedAt": "2023-05-13T10:20:51.607415Z",
+    "name": "Gorgeous Wooden Shoes",
+    "color": "tan",
+    "lifeTime": "2023-06-21T07:08:12.538194Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=965",
+      "https://picsum.photos/640/480/?image=824"
+    ]
+  },
+  {
+    "id": "d83de3d3-ff75-46f3-a83e-c2dc4e3942b8",
+    "title": "Handmade Cotton Cheese",
+    "originalPrice": 300,
+    "soldAmount": 37,
+    "seller": "Sharon.Schultz11",
+    "floraId": "6c597196-cf7d-4b1e-a30e-c0d240fe6716",
+    "status": "Live",
+    "offerEndsAt": "2027-03-02T13:25:33.259086Z",
+    "createdAt": "2023-07-25T06:27:34.02156Z",
+    "updatedAt": "2023-09-09T12:56:42.541751Z",
+    "name": "Unbranded Granite Shoes",
+    "color": "ivory",
+    "lifeTime": "2023-10-02T08:12:26.569729Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=391",
+      "https://picsum.photos/640/480/?image=806",
+      "https://picsum.photos/640/480/?image=87",
+      "https://picsum.photos/640/480/?image=328"
+    ]
+  },
+  {
+    "id": "948eacf1-91ad-4a99-8c4f-cbc2d045489f",
+    "title": "Handmade Granite Table",
+    "originalPrice": 480,
+    "soldAmount": 25,
+    "seller": "Jaylan13",
+    "floraId": "02aecd89-8cae-42da-90e0-16737e8dae3d",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2025-04-14T18:36:43.915547Z",
+    "createdAt": "2023-06-12T17:47:46.503741Z",
+    "updatedAt": "2023-08-26T15:39:03.879258Z",
+    "name": "Sleek Wooden Salad",
+    "color": "cyan",
+    "lifeTime": "2023-11-17T19:34:55.31875Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=467",
+      "https://picsum.photos/640/480/?image=177"
+    ]
+  },
+  {
+    "id": "d5b1afab-e8b3-42fd-a8d5-6aeb2d76ca56",
+    "title": "Incredible Cotton Sausages",
+    "originalPrice": 440,
+    "soldAmount": 5,
+    "seller": "Orville.Ledner",
+    "floraId": "f10d5668-a9dc-4a5f-8a9d-ee897bb4b995",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2029-09-17T13:16:36.643319Z",
+    "createdAt": "2023-06-12T07:26:43.238587Z",
+    "updatedAt": "2023-04-14T11:27:59.002948Z",
+    "name": "Small Wooden Bacon",
+    "color": "olive",
+    "lifeTime": "2023-06-12T19:59:31.048664Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=856",
+      "https://picsum.photos/640/480/?image=781",
+      "https://picsum.photos/640/480/?image=591",
+      "https://picsum.photos/640/480/?image=609"
+    ]
+  },
+  {
+    "id": "4f15a8e2-a2c1-456c-a763-a2b8d0036606",
+    "title": "Incredible Granite Chicken",
+    "originalPrice": 480,
+    "soldAmount": 3,
+    "seller": "Cody27",
+    "floraId": "d6c640f0-e0f9-40ca-89e3-4a742b3fb466",
+    "status": "Finished",
+    "offerEndsAt": "2026-01-13T18:56:54.214167Z",
+    "createdAt": "2023-11-10T04:36:57.436314Z",
+    "updatedAt": "2023-09-24T04:03:00.192681Z",
+    "name": "Awesome Frozen Keyboard",
+    "color": "mint green",
+    "lifeTime": "2023-11-04T09:12:54.476127Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=694",
+      "https://picsum.photos/640/480/?image=702",
+      "https://picsum.photos/640/480/?image=984"
+    ]
+  },
+  {
+    "id": "2c91888d-0b34-4c0c-87cc-b0224b7e7ecd",
+    "title": "Incredible Granite Keyboard",
+    "originalPrice": 30,
+    "soldAmount": 20,
+    "seller": "Rosina22",
+    "floraId": "c0701f32-3a6e-4021-90a7-d169e12a540a",
+    "status": "Live",
+    "offerEndsAt": "2024-07-19T20:59:09.80864Z",
+    "createdAt": "2023-06-30T22:20:15.021694Z",
+    "updatedAt": "2023-03-25T00:09:43.006152Z",
+    "name": "Gorgeous Granite Pants",
+    "color": "gold",
+    "lifeTime": "2023-07-16T22:20:24.789307Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=1078",
+      "https://picsum.photos/640/480/?image=775"
+    ]
+  },
+  {
+    "id": "2893c418-3d09-4a5d-bc67-68664e4f5a55",
+    "title": "Incredible Soft Fish",
+    "originalPrice": 180,
+    "soldAmount": 26,
+    "seller": "Vernon_Ryan62",
+    "floraId": "b0511bd8-07ff-4f84-8e4a-b186e3141c74",
+    "status": "Live",
+    "offerEndsAt": "2030-08-21T16:29:06.854136Z",
+    "createdAt": "2023-03-22T12:01:57.794627Z",
+    "updatedAt": "2023-04-08T20:07:12.675772Z",
+    "name": "Fantastic Granite Keyboard",
+    "color": "indigo",
+    "lifeTime": "2023-06-04T09:49:00.529504Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=533",
+      "https://picsum.photos/640/480/?image=265",
+      "https://picsum.photos/640/480/?image=551"
+    ]
+  },
+  {
+    "id": "651fa2e0-bbff-49e7-adb9-3d73c327452e",
+    "title": "Incredible Steel Bike",
+    "originalPrice": 410,
+    "soldAmount": 7,
+    "seller": "Veronica_Ernser",
+    "floraId": "4fb26992-e94f-44cc-94bc-2113e549310e",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2025-06-25T10:11:30.42591Z",
+    "createdAt": "2023-06-15T15:57:21.953333Z",
+    "updatedAt": "2023-07-10T21:01:45.397012Z",
+    "name": "Intelligent Granite Salad",
+    "color": "turquoise",
+    "lifeTime": "2023-04-11T22:19:44.311709Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=398",
+      "https://picsum.photos/640/480/?image=459"
+    ]
+  },
+  {
+    "id": "377bd1a8-d609-4a90-8775-81d311ea5544",
+    "title": "Intelligent Fresh Mouse",
+    "originalPrice": 320,
+    "soldAmount": 25,
+    "seller": "Deion24",
+    "floraId": "584b0b19-c3e4-47a7-ab19-c181b7c5b4ac",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2029-11-26T13:20:40.085305Z",
+    "createdAt": "2023-05-18T20:01:35.863007Z",
+    "updatedAt": "2023-01-08T00:45:53.738895Z",
+    "name": "Tasty Cotton Salad",
+    "color": "grey",
+    "lifeTime": "2023-02-14T06:35:40.461337Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=695",
+      "https://picsum.photos/640/480/?image=306",
+      "https://picsum.photos/640/480/?image=559"
+    ]
+  },
+  {
+    "id": "0ebccfa5-ef45-4cbd-963e-a8c252f8495a",
+    "title": "Intelligent Rubber Tuna",
+    "originalPrice": 450,
+    "soldAmount": 6,
+    "seller": "Noe.Rolfson",
+    "floraId": "296d472e-b875-497e-a40a-f1e5ee6efba1",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2024-11-14T17:51:42.575072Z",
+    "createdAt": "2023-01-29T10:09:03.162654Z",
+    "updatedAt": "2023-03-30T14:14:42.147968Z",
+    "name": "Licensed Steel Keyboard",
+    "color": "yellow",
+    "lifeTime": "2023-03-04T09:11:44.032122Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=583",
+      "https://picsum.photos/640/480/?image=131",
+      "https://picsum.photos/640/480/?image=896",
+      "https://picsum.photos/640/480/?image=198"
+    ]
+  },
+  {
+    "id": "5556d726-2a39-4214-9d6f-eefc8758c4e6",
+    "title": "Licensed Concrete Bacon",
+    "originalPrice": 60,
+    "soldAmount": 1,
+    "seller": "Zoey_Bogisich",
+    "floraId": "c611af7e-c45e-4fb3-8407-e4f4dd81f7c5",
+    "status": "Finished",
+    "offerEndsAt": "2026-11-26T20:39:35.765866Z",
+    "createdAt": "2023-03-04T15:58:47.200108Z",
+    "updatedAt": "2023-04-16T21:07:50.333373Z",
+    "name": "Handcrafted Soft Sausages",
+    "color": "ivory",
+    "lifeTime": "2023-03-26T02:12:18.446948Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=125",
+      "https://picsum.photos/640/480/?image=370",
+      "https://picsum.photos/640/480/?image=431",
+      "https://picsum.photos/640/480/?image=444"
+    ]
+  },
+  {
+    "id": "20839b96-bb7d-416e-91c7-8ee804cff728",
+    "title": "Licensed Rubber Bike",
+    "originalPrice": 240,
+    "soldAmount": 22,
+    "seller": "Baron71",
+    "floraId": "2b6672ac-6ae3-448f-abb8-98ffdaf8fd90",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2030-02-19T07:42:12.981174Z",
+    "createdAt": "2023-08-17T03:58:04.73371Z",
+    "updatedAt": "2023-11-28T10:22:53.727423Z",
+    "name": "Rustic Plastic Soap",
+    "color": "orange",
+    "lifeTime": "2023-06-07T04:47:38.342768Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=74",
+      "https://picsum.photos/640/480/?image=229",
+      "https://picsum.photos/640/480/?image=224",
+      "https://picsum.photos/640/480/?image=913"
+    ]
+  },
+  {
+    "id": "10023536-3da4-4bdc-b3fc-1d7cdf5e9e8b",
+    "title": "Licensed Rubber Towels",
+    "originalPrice": 340,
+    "soldAmount": 5,
+    "seller": "Franco61",
+    "floraId": "dc52ceb6-2224-480b-8f6c-3cb597fb555c",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2027-02-15T05:08:37.852593Z",
+    "createdAt": "2023-06-26T03:20:53.681408Z",
+    "updatedAt": "2023-07-20T05:25:52.897522Z",
+    "name": "Refined Metal Mouse",
+    "color": "purple",
+    "lifeTime": "2023-04-13T01:07:13.02202Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=314",
+      "https://picsum.photos/640/480/?image=604"
+    ]
+  },
+  {
+    "id": "06f36e3b-f8ef-460f-b88c-59ae8e78254f",
+    "title": "Practical Wooden Car",
+    "originalPrice": 230,
+    "soldAmount": 11,
+    "seller": "Samara_Dickens",
+    "floraId": "bc72308c-0054-4433-ba89-6ef696283570",
+    "status": "Finished",
+    "offerEndsAt": "2027-09-01T07:28:21.479043Z",
+    "createdAt": "2023-03-28T01:03:12.349275Z",
+    "updatedAt": "2023-06-07T05:31:50.360632Z",
+    "name": "Small Wooden Bacon",
+    "color": "maroon",
+    "lifeTime": "2023-01-30T08:36:36.706294Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=1074",
+      "https://picsum.photos/640/480/?image=1009",
+      "https://picsum.photos/640/480/?image=254",
+      "https://picsum.photos/640/480/?image=1007"
+    ]
+  },
+  {
+    "id": "7eff79a7-96c2-4f93-a674-ccfd364a2a3e",
+    "title": "Refined Concrete Hat",
+    "originalPrice": 350,
+    "soldAmount": 20,
+    "seller": "Olin.Kunde",
+    "floraId": "78b82b70-a242-428d-a2ef-c4c0787f7525",
+    "status": "Finished",
+    "offerEndsAt": "2026-06-10T00:58:34.85741Z",
+    "createdAt": "2022-12-20T22:58:14.749195Z",
+    "updatedAt": "2023-10-16T20:43:00.590278Z",
+    "name": "Intelligent Fresh Ball",
+    "color": "fuchsia",
+    "lifeTime": "2023-02-06T17:22:38.957949Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=398",
+      "https://picsum.photos/640/480/?image=564",
+      "https://picsum.photos/640/480/?image=830",
+      "https://picsum.photos/640/480/?image=60"
+    ]
+  },
+  {
+    "id": "638772c7-261c-4434-aff5-bdcb97707712",
+    "title": "Refined Fresh Bike",
+    "originalPrice": 180,
+    "soldAmount": 22,
+    "seller": "William.Gibson50",
+    "floraId": "a443e18d-b717-4628-a389-92294446091b",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2030-10-11T15:09:32.02923Z",
+    "createdAt": "2023-07-11T06:26:21.621766Z",
+    "updatedAt": "2023-10-08T00:04:52.020585Z",
+    "name": "Licensed Wooden Pants",
+    "color": "turquoise",
+    "lifeTime": "2023-11-22T20:15:58.923235Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=482",
+      "https://picsum.photos/640/480/?image=757"
+    ]
+  },
+  {
+    "id": "e747d59c-5936-4430-94cb-1a239905243a",
+    "title": "Refined Rubber Bike",
+    "originalPrice": 180,
+    "soldAmount": 28,
+    "seller": "Kira.Ziemann",
+    "floraId": "a4fc0de7-2008-4589-ba2e-41196a66e515",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2029-05-17T23:23:08.243554Z",
+    "createdAt": "2023-11-25T15:11:04.04612Z",
+    "updatedAt": "2022-12-13T19:20:11.65381Z",
+    "name": "Handmade Fresh Hat",
+    "color": "tan",
+    "lifeTime": "2023-09-18T11:32:04.563762Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=511",
+      "https://picsum.photos/640/480/?image=705",
+      "https://picsum.photos/640/480/?image=550"
+    ]
+  },
+  {
+    "id": "b127b9ae-d013-456e-8979-762e28b6aa44",
+    "title": "Refined Wooden Keyboard",
+    "originalPrice": 330,
+    "soldAmount": 8,
+    "seller": "Micheal.Watsica",
+    "floraId": "84d03c80-ada7-4703-96f5-bcce48a2c14f",
+    "status": "Live",
+    "offerEndsAt": "2026-03-19T11:42:18.182243Z",
+    "createdAt": "2022-12-24T03:46:46.59974Z",
+    "updatedAt": "2023-10-24T02:10:56.469133Z",
+    "name": "Intelligent Frozen Computer",
+    "color": "salmon",
+    "lifeTime": "2023-07-02T04:36:54.556666Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=218",
+      "https://picsum.photos/640/480/?image=210",
+      "https://picsum.photos/640/480/?image=285",
+      "https://picsum.photos/640/480/?image=682"
+    ]
+  },
+  {
+    "id": "8a04f863-5608-44f8-946e-0a38199671d3",
+    "title": "Sleek Metal Bacon",
+    "originalPrice": 330,
+    "soldAmount": 8,
+    "seller": "Justen.Kris80",
+    "floraId": "17dc9ac0-40f4-486a-83bd-8390190a0452",
+    "status": "Live",
+    "offerEndsAt": "2025-06-13T16:43:04.263556Z",
+    "createdAt": "2023-05-14T00:25:38.911496Z",
+    "updatedAt": "2023-09-26T20:37:26.978486Z",
+    "name": "Intelligent Granite Computer",
+    "color": "purple",
+    "lifeTime": "2023-04-24T15:29:11.794341Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=958",
+      "https://picsum.photos/640/480/?image=532",
+      "https://picsum.photos/640/480/?image=195"
+    ]
+  },
+  {
+    "id": "c44c49ee-6015-4897-8710-850a450b935d",
+    "title": "Sleek Rubber Tuna",
+    "originalPrice": 360,
+    "soldAmount": 20,
+    "seller": "Aida_Kuhn73",
+    "floraId": "2cf5957c-e728-406b-94a5-8edbd4c86cda",
+    "status": "Live",
+    "offerEndsAt": "2028-11-14T15:32:32.210258Z",
+    "createdAt": "2023-03-11T15:24:56.838141Z",
+    "updatedAt": "2023-06-02T02:18:51.280929Z",
+    "name": "Fantastic Fresh Bike",
+    "color": "white",
+    "lifeTime": "2023-02-06T22:28:24.199487Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=568",
+      "https://picsum.photos/640/480/?image=713"
+    ]
+  },
+  {
+    "id": "80588e52-2085-448d-af3a-3c3e3319b5fc",
+    "title": "Sleek Wooden Tuna",
+    "originalPrice": 340,
+    "soldAmount": 1,
+    "seller": "Daniela25",
+    "floraId": "0a46b9c6-8229-4ac7-987a-04d1ae82c6c6",
+    "status": "ReserveNotMet",
+    "offerEndsAt": "2028-12-31T19:25:48.712961Z",
+    "createdAt": "2023-03-28T18:19:44.453849Z",
+    "updatedAt": "2023-08-29T00:19:27.242782Z",
+    "name": "Ergonomic Fresh Pants",
+    "color": "orange",
+    "lifeTime": "2023-10-05T14:11:29.504195Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=489",
+      "https://picsum.photos/640/480/?image=999"
+    ]
+  },
+  {
+    "id": "da7ee2a1-a08c-4706-b622-7154cde7db17",
+    "title": "Small Cotton Towels",
+    "originalPrice": 240,
+    "soldAmount": 27,
+    "seller": "Assunta.Padberg12",
+    "floraId": "684652c9-9364-4f59-8fb4-07f797752c92",
+    "status": "Finished",
+    "offerEndsAt": "2026-06-06T04:59:00.671998Z",
+    "createdAt": "2023-09-05T07:24:08.723177Z",
+    "updatedAt": "2023-06-01T01:53:29.828015Z",
+    "name": "Refined Granite Soap",
+    "color": "azure",
+    "lifeTime": "2023-02-24T01:17:22.772127Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=217",
+      "https://picsum.photos/640/480/?image=253",
+      "https://picsum.photos/640/480/?image=857",
+      "https://picsum.photos/640/480/?image=95"
+    ]
+  },
+  {
+    "id": "afe3a647-55a1-43a7-a699-053a7bb0f396",
+    "title": "Small Frozen Chair",
+    "originalPrice": 140,
+    "soldAmount": 25,
+    "seller": "Vinnie.VonRueden7",
+    "floraId": "25681528-abf1-4f55-8f4a-79d833a089f4",
+    "status": "Finished",
+    "offerEndsAt": "2030-09-27T18:59:49.08097Z",
+    "createdAt": "2023-11-02T08:19:15.131211Z",
+    "updatedAt": "2023-11-18T22:38:11.171654Z",
+    "name": "Rustic Fresh Table",
+    "color": "pink",
+    "lifeTime": "2023-03-02T14:00:43.12602Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=873",
+      "https://picsum.photos/640/480/?image=651"
+    ]
+  },
+  {
+    "id": "2ec95472-57e6-418c-9cb5-f5997395c348",
+    "title": "Small Wooden Cheese",
+    "originalPrice": 460,
+    "soldAmount": 15,
+    "seller": "Ramiro.Kozey",
+    "floraId": "a959e096-428b-4610-b6bd-b46eb4f0595f",
+    "status": "Finished",
+    "offerEndsAt": "2030-11-13T20:51:23.360437Z",
+    "createdAt": "2022-12-17T15:44:49.634732Z",
+    "updatedAt": "2023-12-11T16:00:42.655339Z",
+    "name": "Licensed Granite Soap",
+    "color": "tan",
+    "lifeTime": "2023-07-11T21:15:29.784926Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=936",
+      "https://picsum.photos/640/480/?image=456",
+      "https://picsum.photos/640/480/?image=889"
+    ]
+  },
+  {
+    "id": "e5a7257e-7e5e-4c15-b9c8-9f233e33f654",
+    "title": "Unbranded Granite Chips",
+    "originalPrice": 70,
+    "soldAmount": 2,
+    "seller": "Augustus.Deckow33",
+    "floraId": "3e54deb5-b24a-445e-899d-fd871d094fef",
+    "status": "Live",
+    "offerEndsAt": "2027-10-07T04:47:43.274046Z",
+    "createdAt": "2023-06-12T03:11:40.452999Z",
+    "updatedAt": "2023-09-12T18:08:06.964047Z",
+    "name": "Rustic Rubber Pizza",
+    "color": "lime",
+    "lifeTime": "2023-10-19T17:19:19.621574Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=808",
+      "https://picsum.photos/640/480/?image=822",
+      "https://picsum.photos/640/480/?image=173"
+    ]
+  },
+  {
+    "id": "921ddee6-4458-48d4-9ad0-b99d2331492c",
+    "title": "Unbranded Granite Towels",
+    "originalPrice": 180,
+    "soldAmount": 23,
+    "seller": "Rae37",
+    "floraId": "e3b54505-852a-4aea-9b49-8f1a911a73b3",
+    "status": "Live",
+    "offerEndsAt": "2029-11-20T12:38:17.109129Z",
+    "createdAt": "2023-09-01T05:07:56.459143Z",
+    "updatedAt": "2023-08-04T22:14:48.238503Z",
+    "name": "Intelligent Concrete Soap",
+    "color": "plum",
+    "lifeTime": "2023-11-12T06:38:43.533949Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=325",
+      "https://picsum.photos/640/480/?image=592"
+    ]
+  },
+  {
+    "id": "b840dde2-5584-477c-b750-d4efbfc112be",
+    "title": "Unbranded Wooden Bacon",
+    "originalPrice": 230,
+    "soldAmount": 0,
+    "seller": "Eric Kertzmann",
+    "floraId": "2959ea67-5456-4e23-a3d8-d3d62e1cfe58",
+    "status": "0",
+    "offerEndsAt": "2023-12-19T09:48:41.582576Z",
+    "createdAt": "2023-12-13T11:17:56.76224Z",
+    "updatedAt": "2023-12-13T11:17:56.76224Z",
+    "name": "Italian Red Roses 1.1m",
+    "color": "red",
+    "lifeTime": "2023-02-20T06:19:40.930487Z",
+    "pictures": [
+      "https://picsum.photos/640/480/?image=13",
+      "https://picsum.photos/640/480/?image=403"
+    ]
+  }
+]

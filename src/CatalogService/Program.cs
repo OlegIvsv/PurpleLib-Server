@@ -1,5 +1,7 @@
 using CatalogService.Data;
+using CatalogService.Entities;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 {
