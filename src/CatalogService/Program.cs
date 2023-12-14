@@ -1,7 +1,6 @@
 using CatalogService.Data;
-using CatalogService.Entities;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -9,6 +8,20 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddDbContext<CatalogDbContext>(opt =>
     {
         opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
+    builder.Services.AddMassTransit(opt =>
+    {
+        opt.UsingRabbitMq((context, config) =>
+        {
+            config.Host("localhost",
+                "/",
+                h =>
+                {
+                    h.Username("guest");
+                    h.Password("guest");
+                });
+            config.ConfigureEndpoints(context);
+        });
     });
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     builder.Services.AddEndpointsApiExplorer();

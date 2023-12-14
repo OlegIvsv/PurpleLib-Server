@@ -1,3 +1,4 @@
+using MassTransit;
 using SearchService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,20 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddSwaggerGen();
     builder.Services.AddSingleton<IItemRepository, MongoItemRepository>(_ =>
         new MongoItemRepository(builder.Configuration.GetConnectionString("DefaultMongoConnection")!));
+    builder.Services.AddMassTransit(opt =>
+    {
+        opt.UsingRabbitMq((context, config) =>
+        {
+            config.Host("localhost",
+                "/",
+                h =>
+                {
+                    h.Username("guest");
+                    h.Password("guest");
+                });
+            config.ConfigureEndpoints(context);
+        });
+    });
 }
 
 var app = builder.Build();
