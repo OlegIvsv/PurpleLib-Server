@@ -13,4 +13,6 @@ public interface IItemRepository
         string sortProperty);
 
     Task Insert(Item item);
+    Task Update(Item item);
+    Task Delete(Guid id);
 }

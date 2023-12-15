@@ -37,6 +37,18 @@ public class MongoItemRepository : IItemRepository
         await _itemCollection.InsertOneAsync(item);
     }
 
+    public async Task Update(Item item)
+    {
+        var filter = Builders<Item>.Filter.Eq(i => i.Id, item.Id);
+        await _itemCollection.ReplaceOneAsync(filter, item);
+    }
+
+    public async Task Delete(Guid id)
+    {
+        var filter = Builders<Item>.Filter.Eq(i => i.Id, id);
+        await _itemCollection.DeleteOneAsync(filter);
+    }
+
     public async Task<PaginationResult<Item>> RunSearch(
         string? query,
         int page,

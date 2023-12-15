@@ -55,12 +55,14 @@ public class CatalogController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateCatalogItem(CatalogItemCreateRequest request)
     {
+        // PLAN: items are created and send to the outbox table in one transaction. This way ensure consistensy
         var item = _mapper.Map<CatalogItem>(request);
         await _context.CatalogItems.AddAsync(item);
-        await _context.SaveChangesAsync();
-
+        
         var itemCreatedMessage = _mapper.Map<CatalogItemCreated>(item);
         await _publishEndpoint.Publish(itemCreatedMessage);
+        
+        await _context.SaveChangesAsync();
         
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
         return Ok(responseItem);
@@ -79,6 +81,10 @@ public class CatalogController : ControllerBase
 
         _mapper.Map(request, item);
         _context.CatalogItems.Update(item);
+
+        var itemUpdatedMessage = _mapper.Map<CatalogItemUpdated>(item);
+        await _publishEndpoint.Publish(itemUpdatedMessage);
+        
         await _context.SaveChangesAsync();
 
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
@@ -96,6 +102,10 @@ public class CatalogController : ControllerBase
         // TODO: deleting should be implemented as cascade
         _context.Entry(item.Flora).State = EntityState.Deleted;
         _context.CatalogItems.Remove(item);
+
+        var itemDeletedMessage = _mapper.Map<CatalogItemDeleted>(item);
+        await _publishEndpoint.Publish(itemDeletedMessage);
+        
         await _context.SaveChangesAsync();
 
         return Ok();

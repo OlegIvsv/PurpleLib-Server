@@ -44,5 +44,14 @@ public class CatalogItemProfile : Profile
         CreateMap<Flora, CatalogItemCreated>()
             .ForMember(cir => cir.Pictures,
                 opt => opt.MapFrom(f => f.Pictures.Select(p => p.Url).ToList()));
+
+        CreateMap<CatalogItem, CatalogItemUpdated>()
+            .IncludeMembers(x => x.Flora);
+
+        CreateMap<Flora, CatalogItemUpdated>()
+            .ForMember(cir => cir.Pictures,
+                opt => opt.MapFrom(f => f.Pictures.Select(p => p.Url).ToList()));
+
+        CreateMap<CatalogItem, CatalogItemDeleted>();
     }
 }

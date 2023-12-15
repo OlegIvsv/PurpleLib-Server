@@ -11,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
     });
     builder.Services.AddMassTransit(opt =>
     {
+        opt.AddEntityFrameworkOutbox<CatalogDbContext>(o =>
+        {
+            o.QueryDelay = TimeSpan.FromSeconds(15);
+            o.UsePostgres();
+            o.UseBusOutbox();
+        });
         opt.UsingRabbitMq((context, config) =>  
         {
             config.ConfigureEndpoints(context);
