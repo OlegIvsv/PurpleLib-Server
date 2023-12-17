@@ -4,6 +4,7 @@ using CatalogService.Data;
 using CatalogService.Entities;
 using Contracts.CatalogItem;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,7 +39,7 @@ public class CatalogController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetAllCatalogItems(Guid id)
+    public async Task<IActionResult> GetCatalogItemById(Guid id)
     {
         var item = await _context.CatalogItems
             .Include(ci => ci.Flora)
@@ -52,11 +53,12 @@ public class CatalogController : ControllerBase
         return Ok(responseItems);
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> CreateCatalogItem(CatalogItemCreateRequest request)
     {
-        // PLAN: items are created and send to the outbox table in one transaction. This way ensure consistensy
         var item = _mapper.Map<CatalogItem>(request);
+        item.Seller = User.Identity.Name;
         await _context.CatalogItems.AddAsync(item);
         
         var itemCreatedMessage = _mapper.Map<CatalogItemCreated>(item);
@@ -68,6 +70,7 @@ public class CatalogController : ControllerBase
         return Ok(responseItem);
     }
 
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateCatalogItem(Guid id, CatalogItemUpdateRequest request)
     {
@@ -78,6 +81,9 @@ public class CatalogController : ControllerBase
 
         if (item is null)
             return NotFound();
+
+        if (item.Seller != User.Identity.Name)
+            return Forbid();
 
         _mapper.Map(request, item);
         _context.CatalogItems.Update(item);
@@ -91,14 +97,20 @@ public class CatalogController : ControllerBase
         return Ok(responseItem);
     }
 
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCatalogItem(Guid id)
     {
         var item = await _context.CatalogItems
             .Include(i => i.Flora)
             .FirstOrDefaultAsync(i => i.Id == id);
+        
         if (item is null)
             return NotFound();
+
+        if (item.Seller != User.Identity.Name)
+            return Forbid();
+        
         // TODO: deleting should be implemented as cascade
         _context.Entry(item.Flora).State = EntityState.Deleted;
         _context.CatalogItems.Remove(item);

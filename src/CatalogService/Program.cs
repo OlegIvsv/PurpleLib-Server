@@ -1,6 +1,9 @@
 using CatalogService.Data;
 using MassTransit;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+
+// TODO: move large service configs to it's own extension method
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -25,6 +28,15 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    builder.Services
+        .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(opt =>
+        {   
+            opt.Authority = builder.Configuration["IdentityServerUrl"];
+            opt.RequireHttpsMetadata = false;
+            opt.TokenValidationParameters.ValidateAudience = false;
+            opt.TokenValidationParameters.NameClaimType = "username";
+        });
 }
 
 var app = builder.Build();
@@ -34,10 +46,11 @@ var app = builder.Build();
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
+    app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers();
 }
+
 
 try
 {
