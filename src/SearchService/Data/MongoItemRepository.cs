@@ -56,7 +56,7 @@ public class MongoItemRepository : IItemRepository
         string sortOrder,
         string sortProperty)
     {
-        int preventedPage = Math.Max(0, page);
+        int preventedPage = Math.Max(1, page);
         int preventedPageSize = Math.Max(1, pageSize);
 
         var filter = ItemFilter(query);
