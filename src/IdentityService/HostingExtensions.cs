@@ -48,7 +48,8 @@ internal static class HostingExtensions
     }
     
     public static WebApplication ConfigurePipeline(this WebApplication app)
-    { 
+    {
+        app.UseCors(config => config.SetIsOriginAllowed(_ => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
         app.UseSerilogRequestLogging();
         if (app.Environment.IsDevelopment())
             app.UseDeveloperExceptionPage();
@@ -56,6 +57,8 @@ internal static class HostingExtensions
         app.UseRouting();
         app.UseIdentityServer();
         app.UseAuthorization();
+        //TODO: remove controllers and cors
+        app.MapControllers();
         app.MapRazorPages().RequireAuthorization();
 
         return app;

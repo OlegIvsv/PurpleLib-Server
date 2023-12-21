@@ -8,6 +8,8 @@ public class RegisterViewModel
     [Required] public string Password { get; set; }
     [Required] public string Username { get; set; }
     [Required] public string Fullname { get; set; }
+
+    [Required] public bool IsSeller { get; set; }
     public string ReturnUrl { get; set; }
     public string Button { get; set; }
 }

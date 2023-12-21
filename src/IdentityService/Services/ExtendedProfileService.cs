@@ -24,11 +24,11 @@ public class ExtendedProfileService : IProfileService
         var existingClaims = await _userManager.GetClaimsAsync(user);
         var claims = new Claim[]
         {
-            new("username", user.UserName)
+            new("username", user.UserName),
         };
         
         context.IssuedClaims.AddRange(claims);
-        context.IssuedClaims.Add(existingClaims.FirstOrDefault(x => x.Type == JwtClaimTypes.Name));
+        context.IssuedClaims.AddRange(existingClaims);
     }
 
     public Task IsActiveAsync(IsActiveContext context)

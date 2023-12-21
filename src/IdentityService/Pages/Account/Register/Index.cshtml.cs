@@ -54,11 +54,12 @@ public class Index : PageModel
 
         if (registerResult.Succeeded)
         {
-            await _userManager.AddClaimsAsync(user,
-                new Claim[]
-                {
-                    new(JwtClaimTypes.Name, Input.Fullname)
-                });
+            var claims = new List<Claim>
+            {
+                new(JwtClaimTypes.Name, Input.Fullname),
+                new(JwtClaimTypes.Role, Input.IsSeller ? "seller" : "customer")
+            };
+            await _userManager.AddClaimsAsync(user, claims);
             RegisterSuccessful = true;
         }
 

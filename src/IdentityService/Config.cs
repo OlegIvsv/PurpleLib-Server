@@ -27,7 +27,22 @@ public static class Config
                 AllowedScopes = { "purplelib-app", "openid", "profile" },
                 RedirectUris = { "https://youtube.com" },
                 ClientSecrets = { new("jetbrains_secret".Sha256()) },
-                AllowedGrantTypes = { GrantType.ResourceOwnerPassword }
+                AllowedGrantTypes = { GrantType.ResourceOwnerPassword },
+                AlwaysIncludeUserClaimsInIdToken = true
+
+            },
+            new()
+            {
+                ClientId = "purplelib-nextjs-client",
+                ClientName = "PurpleLib Next.js Client",
+                ClientSecrets = {new ("purplelib-nextjs-client_secret".Sha256())},
+                AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
+                RequirePkce = false,
+                RedirectUris = {"http://localhost:3000/api/auth/callback/id-server"},
+                AllowOfflineAccess = true,
+                AllowedScopes = {"openid", "profile", "purplelib-app"},
+                AccessTokenLifetime = 3600*24*30,
+                AlwaysIncludeUserClaimsInIdToken = true
             }
         };  
-}
+} 
