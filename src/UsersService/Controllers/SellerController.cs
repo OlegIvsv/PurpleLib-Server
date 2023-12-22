@@ -36,9 +36,9 @@ public class SellerController : ControllerBase
             return NotFound();
 
         seller.Name = request.Name;
+        seller.Email = request.Email;
         seller.Description = request.Description;
         seller.Pictures = request.Pictures;
-        seller.StripeConnectedAccountId = request.StripeConnectedAccountId;
         
         await _sellerRepository.EditSeller(seller);
         return Ok();
@@ -52,7 +52,9 @@ public class SellerController : ControllerBase
         {
             Id = ReadUserId(),
             Name = request.Name,
-            Email = request.Email
+            Email = request.Email, 
+            Description = request.Description,
+            Pictures = request.Pictures
         };
         await _sellerRepository.CreateSeller(seller);
         return Ok();
