@@ -4,7 +4,7 @@ namespace UsersService.Services;
 
 public interface ISellerRepository
 {
-    Task CreateSeller(Seller seller);
-    Task<Seller?> GetById(Guid id);
-    Task<Seller?> EditSeller(Seller seller);
+    Task CreateAsync(Seller seller);
+    Task<Seller?> GetByIdAsync(Guid id);
+    Task<Seller?> EditAsync(Seller seller);
 }

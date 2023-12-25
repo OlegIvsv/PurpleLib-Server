@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UsersService.Contracts;
@@ -12,35 +13,39 @@ namespace UsersService.Controllers;
 public class SellerController : ControllerBase
 {
     private readonly ISellerRepository _sellerRepository;
+    private readonly IMapper _mapper;
 
-    public SellerController(ISellerRepository repository)
+    public SellerController(ISellerRepository repository, IMapper mapper)
     {
         _sellerRepository = repository;
+        _mapper = mapper;
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetRoleByProviderId(Guid id)
+    [AllowAnonymous]
+    public async Task<IActionResult> GetSellerByIdAsync(Guid id)
     {
-        var seller = await _sellerRepository.GetById(id);
+        var seller = await _sellerRepository.GetByIdAsync(id);
+        
         if (seller is null)
             return NotFound();
-        return Ok(seller);
+        
+        var response = _mapper.Map<GetSellerResponse>(seller);
+        return Ok(response);
     }
 
     [HttpPut]
     [Authorize("SellerOnly")]
     public async Task<IActionResult> UpdateSellerRecord(EditSellerRequest request)
     {
-        var seller = await _sellerRepository.GetById(request.Id);
+        var seller = await _sellerRepository.GetByIdAsync(request.Id);
+       
         if (seller is null)
             return NotFound();
 
-        seller.Name = request.Name;
-        seller.Email = request.Email;
-        seller.Description = request.Description;
-        seller.Pictures = request.Pictures;
+        seller = _mapper.Map(request, seller);
+        await _sellerRepository.EditAsync(seller);
         
-        await _sellerRepository.EditSeller(seller);
         return Ok();
     }
 
@@ -48,15 +53,11 @@ public class SellerController : ControllerBase
     [Authorize("SellerOnly")]
     public async Task<IActionResult> CreateSellerRecord(CreateSellerRequest request)
     {
-        var seller = new Seller
-        {
-            Id = ReadUserId(),
-            Name = request.Name,
-            Email = request.Email, 
-            Description = request.Description,
-            Pictures = request.Pictures
-        };
-        await _sellerRepository.CreateSeller(seller);
+        var seller = _mapper.Map<Seller>(request);
+        seller.Id = ReadUserId();
+        
+        await _sellerRepository.CreateAsync(seller);
+        
         return Ok();
     }
 

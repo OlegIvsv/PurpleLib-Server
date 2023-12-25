@@ -16,17 +16,17 @@ public class SellerMongoRepository : ISellerRepository
         _sellerCollection = _database.GetCollection<Seller>("sellers");
     }
 
-    public async Task CreateSeller(Seller seller)
+    public async Task CreateAsync(Seller seller)
     {
         await _sellerCollection.InsertOneAsync(seller);
     }
 
-    public async Task<Seller?> GetById(Guid id)
+    public async Task<Seller?> GetByIdAsync(Guid id)
     {
         return await _sellerCollection.AsQueryable().FirstOrDefaultAsync(s => s.Id == id);
     }
 
-    public async Task<Seller?> EditSeller(Seller seller)
+    public async Task<Seller?> EditAsync(Seller seller)
     {
         var filter = Builders<Seller>.Filter.Eq(s => s.Id, seller.Id);
         var options = new ReplaceOptions { IsUpsert = true };

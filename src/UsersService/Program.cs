@@ -16,10 +16,10 @@ var builder = WebApplication.CreateBuilder(args);
             opt.TokenValidationParameters.NameClaimType = "sub";
         });
     builder.Services.AddAuthorization(opt => opt.AddPolicy("SellerOnly", policyBuilder => { policyBuilder.RequireRole("seller"); }));
-
     builder.Services.AddSingleton<ISellerRepository, SellerMongoRepository>(_ =>
         new SellerMongoRepository(builder.Configuration.GetConnectionString("DefaultMongoConnection")!));
     builder.Services.AddSwaggerGen();
+    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 }
 var app = builder.Build();
 {
