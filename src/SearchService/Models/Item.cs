@@ -7,7 +7,9 @@ public class Item
     public string Name { get; set; }
     public string? Color { get; set; }
     public int OriginalPrice { get; set; }
-    public string Seller { get; set; }
+    public Guid SellerId { get; set; }
+    public int TotalAmount { get; set; }
+    public int SoldAmount { get; set; }
     public string Status { get; set; }
     public List<string> Pictures { get; set; }
     public DateTime? LifeTime { get; set; }

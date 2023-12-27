@@ -41,6 +41,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
+    app.UseCors(config => config.SetIsOriginAllowed(_ => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();

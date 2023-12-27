@@ -1,5 +1,6 @@
 using AutoMapper;
 using CatalogService.Contracts;
+using CatalogService.Contracts.Api;
 using CatalogService.Entities;
 using Contracts.CatalogItem;
 

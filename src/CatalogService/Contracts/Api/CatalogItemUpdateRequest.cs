@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 
-namespace CatalogService.Contracts;
+namespace CatalogService.Contracts.Api;
 
 public record CatalogItemUpdateRequest(
     [Required] string Title,

@@ -2,7 +2,7 @@
 
 public enum ItemStatus
 {
-    Live = 1,
-    Finished = 2,
-    ReserveNotMet = 3
+    Active = 1,
+    SoldOut = 2,
+    Closed = 3
 }

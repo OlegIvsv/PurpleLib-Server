@@ -6,7 +6,8 @@ public class CatalogItemCreated
     public string Title { get; init; }
     public int OriginalPrice { get; init; }
     public int SoldAmount { get; init; }
-    public string Seller { get; init; }
+    public int TotalAmount { get; set; }
+    public Guid SellerId { get; init; }
     public Guid FloraId { get; init; }
     public string Status { get; init; }
     public DateTime OfferEndsAt { get; init; }

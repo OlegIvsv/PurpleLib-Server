@@ -1,5 +1,6 @@
+using System.Security.Claims;
 using AutoMapper;
-using CatalogService.Contracts;
+using CatalogService.Contracts.Api;
 using CatalogService.Data;
 using CatalogService.Entities;
 using Contracts.CatalogItem;
@@ -26,7 +27,8 @@ public class CatalogController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllCatalogItems()
+    [AllowAnonymous]
+    public async Task<IActionResult> GetAllCatalogItemsAsync()
     {
         var items = await _context.CatalogItems
             .Include(ci => ci.Flora)
@@ -39,7 +41,8 @@ public class CatalogController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetCatalogItemById(Guid id)
+    [AllowAnonymous]
+    public async Task<IActionResult> GetCatalogItemByIdAsync(Guid id)
     {
         var item = await _context.CatalogItems
             .Include(ci => ci.Flora)
@@ -53,26 +56,41 @@ public class CatalogController : ControllerBase
         return Ok(responseItems);
     }
 
+    [HttpGet("by-seller/{sellerId}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetCatalogItemBySellerIdAsync(Guid sellerId)
+    {
+        var sellerItems = await _context.CatalogItems
+            .Include(ci => ci.Flora)
+            .ThenInclude(f => f.Pictures)
+            .Where(ci => ci.SellerId == sellerId)
+            .ToListAsync();
+        
+        var responseItems = _mapper.Map<List<CatalogItemResponse>>(sellerItems);
+        return Ok(responseItems);
+    }
+
     [Authorize]
     [HttpPost]
-    public async Task<IActionResult> CreateCatalogItem(CatalogItemCreateRequest request)
+    public async Task<IActionResult> CreateCatalogItemAsync(CatalogItemCreateRequest request)
     {
         var item = _mapper.Map<CatalogItem>(request);
-        item.Seller = User.Identity.Name;
+
+        item.SellerId = ReadUserId();
         await _context.CatalogItems.AddAsync(item);
-        
+
         var itemCreatedMessage = _mapper.Map<CatalogItemCreated>(item);
         await _publishEndpoint.Publish(itemCreatedMessage);
-        
+
         await _context.SaveChangesAsync();
-        
+
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
         return Ok(responseItem);
     }
 
     [Authorize]
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateCatalogItem(Guid id, CatalogItemUpdateRequest request)
+    public async Task<IActionResult> UpdateCatalogItemAsync(Guid id, CatalogItemUpdateRequest request)
     {
         var item = await _context.CatalogItems
             .Include(c => c.Flora)
@@ -82,7 +100,7 @@ public class CatalogController : ControllerBase
         if (item is null)
             return NotFound();
 
-        if (item.Seller != User.Identity.Name)
+        if (item.SellerId != ReadUserId())
             return Forbid();
 
         _mapper.Map(request, item);
@@ -90,7 +108,7 @@ public class CatalogController : ControllerBase
 
         var itemUpdatedMessage = _mapper.Map<CatalogItemUpdated>(item);
         await _publishEndpoint.Publish(itemUpdatedMessage);
-        
+
         await _context.SaveChangesAsync();
 
         var responseItem = _mapper.Map<CatalogItemResponse>(item);
@@ -99,27 +117,33 @@ public class CatalogController : ControllerBase
 
     [Authorize]
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteCatalogItem(Guid id)
+    public async Task<IActionResult> DeleteCatalogItemAsync(Guid id)
     {
         var item = await _context.CatalogItems
             .Include(i => i.Flora)
             .FirstOrDefaultAsync(i => i.Id == id);
-        
+
         if (item is null)
             return NotFound();
 
-        if (item.Seller != User.Identity.Name)
+        if (item.SellerId != ReadUserId())
             return Forbid();
-        
+
         // TODO: deleting should be implemented as cascade
         _context.Entry(item.Flora).State = EntityState.Deleted;
         _context.CatalogItems.Remove(item);
 
         var itemDeletedMessage = _mapper.Map<CatalogItemDeleted>(item);
         await _publishEndpoint.Publish(itemDeletedMessage);
-        
+
         await _context.SaveChangesAsync();
 
         return Ok();
+    }
+
+    private Guid ReadUserId()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        return Guid.Parse(userId);
     }
 }

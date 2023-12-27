@@ -1,13 +1,14 @@
-namespace CatalogService.Contracts;
+namespace CatalogService.Contracts.Api;
 
 public class CatalogItemResponse
 {
     public Guid Id { get; set; }
+    public Guid FloraId { get; init; }
+    public Guid SellerId { get; init; }
     public string Title { get; init; }
     public int OriginalPrice { get; init; }
     public int SoldAmount { get; init; }
-    public string Seller { get; init; }
-    public Guid FloraId { get; init; }
+    public int TotalAmount { get; set; }
     public string Status { get; init; }
     public DateTime OfferEndsAt { get; init; }
     public DateTime CreatedAt { get; init; }

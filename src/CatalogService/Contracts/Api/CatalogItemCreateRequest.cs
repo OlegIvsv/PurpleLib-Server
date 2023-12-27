@@ -1,12 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 
-namespace CatalogService.Contracts;
+namespace CatalogService.Contracts.Api;
 
 public record CatalogItemCreateRequest(
     [Required] string Title,
     [Required] int OriginalPrice,
-    [Required] string Seller,
+    [Required] int TotalAmount,
+    [Required] Guid SellerId,
     [Required] DateTime OfferEndsAt,
     [Required] string Name,
     [Required] string? Color,
