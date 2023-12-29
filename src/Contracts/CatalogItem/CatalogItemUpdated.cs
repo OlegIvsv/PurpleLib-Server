@@ -15,6 +15,7 @@ public class CatalogItemUpdated
     public DateTime UpdatedAt { get; init; }
     public string Name { get; init; }
     public string? Color { get; init; }
+    private string? Description { get; set; }
     public DateTime? LifeTime { get; init; }
     public List<string> Pictures { get; init; }
 }

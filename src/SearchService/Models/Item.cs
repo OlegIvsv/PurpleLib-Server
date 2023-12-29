@@ -6,6 +6,7 @@ public class Item
     public string Title { get; set; }
     public string Name { get; set; }
     public string? Color { get; set; }
+    private string? Description { get; set; }
     public int OriginalPrice { get; set; }
     public Guid SellerId { get; set; }
     public int TotalAmount { get; set; }
