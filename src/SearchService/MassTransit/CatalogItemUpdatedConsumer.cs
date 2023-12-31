@@ -9,17 +9,17 @@ namespace SearchService.MassTransit;
 public class CatalogItemUpdatedConsumer : IConsumer<CatalogItemUpdated>
 {
     private readonly IMapper _mapper;
-    private readonly IItemRepository _itemRepository;
+    private readonly IItemService _itemService;
 
-    public CatalogItemUpdatedConsumer(IMapper mapper, IItemRepository itemRepository)
+    public CatalogItemUpdatedConsumer(IMapper mapper, IItemService itemService)
     {
         _mapper = mapper;
-        _itemRepository = itemRepository;
+        _itemService = itemService;
     }
 
     public async Task Consume(ConsumeContext<CatalogItemUpdated> context)
     {
         var item = _mapper.Map<Item>(context.Message);
-        await _itemRepository.Update(item);
+        await _itemService.Update(item);
     }
 }

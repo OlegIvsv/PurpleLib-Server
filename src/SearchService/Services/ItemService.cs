@@ -5,12 +5,12 @@ using SearchService.Models;
 
 namespace SearchService.Data;
 
-public class MongoItemRepository : IItemRepository
+public class ItemService : IItemService
 {
     private readonly IMongoCollection<Item> _itemCollection;
     private readonly IMongoDatabase _database;
 
-    public MongoItemRepository(string connectionString)
+    public ItemService(string connectionString)
     {
         var mongoClient = new MongoClient(connectionString);
         _database = mongoClient.GetDatabase("search-db");

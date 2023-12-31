@@ -15,6 +15,7 @@ public class Item
     public List<string> Pictures { get; set; }
     public DateTime? LifeTime { get; set; }
     public DateTime OfferEndsAt { get; set; }
+    public DateTime OfferStartsAt { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 }

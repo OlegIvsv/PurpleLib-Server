@@ -52,7 +52,8 @@ public class DataSeeder : IDisposable
             .RuleFor(c => c.SellerId, f => Guid.NewGuid())
             .RuleFor(c => c.Status, f => f.PickRandom<ItemStatus>())
             .RuleFor(c => c.OfferEndsAt, f => f.Date.Future(7).ToUniversalTime())
-            .RuleFor(c => c.Description, f => f.Lorem.Paragraphs(3))
+            .RuleFor(c => c.OfferStartsAt, f => f.Date.Between(f.Date.Past(2), f.Date.Future(1)).ToUniversalTime())
+            .RuleFor(c => c.Description, f => f.Lorem.Paragraphs(6))
             .RuleFor(c => c.CreatedAt, f => f.Date.Past(1).ToUniversalTime())
             .RuleFor(c => c.UpdatedAt, f => f.Date.Past(1).ToUniversalTime())
             .RuleFor(c => c.Flora, f => floraFaker.Generate());

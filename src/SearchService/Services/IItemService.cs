@@ -3,7 +3,7 @@ using SearchService.Models;
 
 namespace SearchService.Data;
 
-public interface IItemRepository
+public interface IItemService
 {
     Task<PaginationResult<Item>> RunSearch(
         string? query,

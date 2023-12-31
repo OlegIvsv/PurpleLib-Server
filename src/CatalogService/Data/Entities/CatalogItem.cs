@@ -12,6 +12,7 @@ public class CatalogItem
     public ItemStatus Status { get; set; }
     public string? Description { get; set; }
     public DateTime OfferEndsAt { get; set; }
+    public DateTime OfferStartsAt { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 

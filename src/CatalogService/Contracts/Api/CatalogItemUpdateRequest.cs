@@ -8,6 +8,7 @@ public record CatalogItemUpdateRequest(
     int OriginalPrice,
     string Seller,
     DateTime OfferEndsAt,
+    DateTime OfferStartsAt,
     string Name,
     string? Color,
     string? Description,

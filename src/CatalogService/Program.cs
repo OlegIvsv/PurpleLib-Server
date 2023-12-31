@@ -1,4 +1,5 @@
 using CatalogService.Data;
+using CatalogService.Services;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +38,7 @@ var builder = WebApplication.CreateBuilder(args);
             opt.TokenValidationParameters.ValidateAudience = false;
             opt.TokenValidationParameters.NameClaimType = "username";
         });
+    builder.Services.AddTransient<IItemCatalogService, ItemCatalogService>();
 }
 
 var app = builder.Build();

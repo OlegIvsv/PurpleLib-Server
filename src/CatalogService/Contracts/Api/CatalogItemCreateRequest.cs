@@ -11,5 +11,6 @@ public record CatalogItemCreateRequest(
     string? Color,
     string? Description,
     DateTime OfferEndsAt,
+    DateTime OfferStartsAt,
     DateTime? LifeTime,
     [MinLength(1)] List<string> Pictures);

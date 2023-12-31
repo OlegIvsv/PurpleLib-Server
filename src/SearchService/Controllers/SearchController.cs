@@ -7,11 +7,11 @@ namespace SearchService.Controllers;
 [Route("api/{controller}")]
 public class SearchController : ControllerBase
 {
-    private readonly IItemRepository _itemRepository;
+    private readonly IItemService _itemService;
 
-    public SearchController(IItemRepository itemRepository)
+    public SearchController(IItemService itemService)
     {
-        _itemRepository = itemRepository;
+        _itemService = itemService;
     }
 
     [HttpGet]
@@ -22,7 +22,7 @@ public class SearchController : ControllerBase
         string? sortOrder, 
         string? sortProperty)
     {
-        var pageItems = await _itemRepository.RunSearch(
+        var pageItems = await _itemService.RunSearch(
             query, 
             page.GetValueOrDefault(1), 
             pageSize.GetValueOrDefault(4), 

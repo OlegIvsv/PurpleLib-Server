@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-    builder.Services.AddSingleton<IItemRepository, MongoItemRepository>(_ =>
-        new MongoItemRepository(builder.Configuration.GetConnectionString("DefaultMongoConnection")!));
+    builder.Services.AddSingleton<IItemService, ItemService>(_ =>
+        new ItemService(builder.Configuration.GetConnectionString("DefaultMongoConnection")!));
     builder.Services.AddMassTransitWithConfigurations();
 }
 
